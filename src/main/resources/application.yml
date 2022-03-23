@@ -1,0 +1,11 @@
+server:
+  port: 7777
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  kafka:
+    producer:
+      bootstrap-servers: logistics-kafka.dev.kurly.services:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
